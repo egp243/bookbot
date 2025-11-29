@@ -1,22 +1,22 @@
 from stats import get_book_text, word_counter, char_counter, sort_characters
+import sys
 
 def main():
-    # 1. Get the text from the file
+    # Get the text from the file
     text = get_book_text("books/frankenstein.txt")
 
-    # 2. Calculate and print the total word count
+    # Calculate and print the total word count
     num_of_words = word_counter(text)
     print(f"Found {num_of_words} total words")
 
-    # 3. Count character usage
+    # Count character usage
     char_dict = char_counter(text)
-    # (Optional: You can print the raw dictionary if you want to debug)
-    # print(char_dict) 
+    print(char_dict) 
 
-    # 4. Convert the dictionary to a sorted list
+    # Convert the dictionary to a sorted list
     sorted_chars = sort_characters(char_dict)
 
-    # 5. Loop through the sorted list and print only the alphabet characters
+    # Loop through the sorted list and print only the alphabet characters
     print("--- Begin report of books/frankenstein.txt ---")
     print(f"{num_of_words} words found in the document")
     print() # Prints a blank line
