@@ -17,3 +17,14 @@ def char_counter(text):
         else:
             char_dict[lower_c] = 1
     return char_dict
+
+def sort_characters(char_dict):
+    sorted_char = []
+
+    for char, cnt in char_dict.items():
+        sorted_char.append({"char": char, "num": cnt})
+    sorted_char.sort(reverse=True, key=sort_on)
+    return sorted_char
+
+def sort_on(item):
+    return item["num"]
