@@ -32,7 +32,7 @@ def main():
         
         # We only want to print letters, not symbols or spaces
         if char.isalpha():
-            print(f"The '{char}' character was found {count} times")
+            print(f"{char}: {count}")
             
     print("--- End report ---")
 
